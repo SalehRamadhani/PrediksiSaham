@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Tools Penentuan Harga Wajar Saham</title>
+        <link rel="stylesheet" href="warna_isi_data.css" />
+    </head>
+    <body>
+            <div class="inputData">
+                    <div class="isian">
+                        <div class="judul">
+                            <h1>Rasio Keuangan 📑</h1><br>
+                        </div>
+                        <!-- Inputan untuk data rasio keuangan -->
+                        <div class="RasioKeuangan">
+                            <div class="PBV">
+                                <h2> PBV </h2>
+                                <input id="inputPBV" class="InputDataRasio" onkeypress="return hanyaAngka(event)"
+                                placeholder="Nilai PBV" oninput="formatNumber(this)"/> 
+                            </div>
+                            <div class="PER">
+                                <h2> PER </h2>
+                                <input id="inputPER" class="InputDataRasio" onkeypress="return hanyaAngka(event)"
+                                placeholder="Nilai PER" oninput="formatNumber(this)"/>
+                            </div>
+                            <div class="EPS">
+                                <h2> EPS (Rp)</h2>
+                                <input  id="inputEPS" class="InputDataRasio" onkeypress="return hanyaAngka(event)"
+                                placeholder="Nilai EPS" oninput="formatNumber(this)"/>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="utama">
+                <div class="button-container">
+                    <a href="Hasil_prediksi.html">
+                        <button onclick="onProcess()" class="tombol1" id="processButton">Prediksi Harga Wajar</button>
+                    </a>
+                </div>                  
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+        <script src="papaparse.min.js"></script>
+        <script type="application/javascript" src="index.js"> </script>
+    </body>
+</html>
